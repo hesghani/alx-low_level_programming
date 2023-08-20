@@ -13,13 +13,18 @@ int print_sign(int n)
 	{
 		_putchar('+');
 		return (1);
-	} else if (n == 0)
-}
-		_putchar(48);
+	}
+	else if (n == 0)
+	{
+		_putchar('0'); // Changed 48 to '0' to print the character '0'
 		return (0);
-	} else if (n < 0)
+	}
+	else if (n < 0)
 	{
 		_putchar('-');
-	}
 		return (-1);
+	}
+
+	// Add a return statement here to handle the case when none of the conditions are met
+	return (0);
 }
