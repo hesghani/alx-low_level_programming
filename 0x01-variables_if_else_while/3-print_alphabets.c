@@ -1,19 +1,13 @@
 #include <stdio.h>
-
-/**
- * main - Prints the alphabet.
- *
- * Return: Always 0 (Success)
- */
-int main(void)
+// I'm learning C loops HEll YAAAAAAAAAAAAAAAAA
+int main()
 {
-char alp[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	int i;
-
-	for (i = 0; i < 52; i++)
+	char A = 'a';
+	while (A <= 'z')
 	{
-		putchar(alp[i]);
+		putchar (A);
+		A++;
 	}
 	putchar('\n');
-	return (0);
+	return 0;
 }

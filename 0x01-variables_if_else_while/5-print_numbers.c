@@ -1,18 +1,12 @@
 #include <stdio.h>
-
-/**
- * main - Prints numbers from 0 to 9.
- *
- * Return: Always 0 (Success)
- */
-int main(void)
+/* when declare a variable its normally a const to make it vary u  need format specializers*/
+int main ()
 {
-	int i;
-
-	for (i = 0; i < 10; i++)
+	int i = 0;
+	for (i = 0; i < 10 ; i++)
 	{
-		printf("%d", i);
+		printf("%d",i);
 	}
-	putchar('\n');
-	return (0);
+	printf("\n");
+	return 0;
 }
