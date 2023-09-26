@@ -1,34 +1,34 @@
-#include "custom_lists.h"
+#include "lists.h"
 
 /**
- * custom_list_add_node_end - adds a node at the end of a custom linked list
+ * add_nodeint_end - adds a node at the end of a linked list
  * @head: pointer to the first element in the list
- * @data: data to insert in the new element
+ * @n: data to insert in the new element
  *
  * Return: pointer to the new node, or NULL if it fails
  */
-CustomListNode *custom_list_add_node_end(CustomListNode **head, const int data)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-    CustomListNode *new_node;
-    CustomListNode *temp = *head;
+	listint_t *new;
+	listint_t *temp = *head;
 
-    new_node = malloc(sizeof(CustomListNode));
-    if (!new_node)
-        return (NULL);
+	new = malloc(sizeof(listint_t));
+	if (!new)
+		return (NULL);
 
-    new_node->data = data;
-    new_node->next = NULL;
+	new->n = n;
+	new->next = NULL;
 
-    if (*head == NULL)
-    {
-        *head = new_node;
-        return (new_node);
-    }
+	if (*head == NULL)
+	{
+		*head = new;
+		return (new);
+	}
 
-    while (temp->next)
-        temp = temp->next;
+	while (temp->next)
+		temp = temp->next;
 
-    temp->next = new_node;
+	temp->next = new;
 
-    return (new_node);
+	return (new);
 }

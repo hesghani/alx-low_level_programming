@@ -1,20 +1,21 @@
-#include "custom_lists.h"
+#include "lists.h"
 
 /**
- * custom_list_length - returns the number of elements in a custom linked list
- * @head: custom linked list of type CustomListNode to traverse
+ * listint_len - returns the number of elements in a linked lists
+ * @h: linked list of type listint_t to traverse
  *
  * Return: number of nodes
  */
-size_t custom_list_length(const CustomListNode *head)
+size_t listint_len(const listint_t *h)
 {
-    size_t num = 0;
+	size_t num = 0;
 
-    while (head)
-    {
-        num++;
-        head = head->next;
-    }
+	while (h)
+	{
+		num++;
+		h = h->next;
+	}
 
-    return (num);
+	return (num);
 }
+

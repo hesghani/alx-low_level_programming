@@ -1,38 +1,38 @@
-#ifndef CUSTOM_LISTS_H
-#define CUSTOM_LISTS_H
+#ifndef LISTS_H
+#define LISTS_H
 
 #include <stdio.h>
 #include <stdlib.h>
 
 /**
- * struct CustomListNode - singly linked list node
- * @data: integer
+ * struct listint_s - singly linked list
+ * @n: integer
  * @next: points to the next node
  *
  * Description: singly linked list node structure
- * for custom project
+ * for alx project
  */
-typedef struct CustomListNode
+typedef struct listint_s
 {
-    int data;
-    struct CustomListNode *next;
-} CustomListNode;
+	int n;
+	struct listint_s *next;
+} listint_t;
 
-size_t custom_list_print(const CustomListNode *head);
-size_t custom_list_length(const CustomListNode *head);
-CustomListNode *custom_list_add_node(CustomListNode **head, const int data);
-CustomListNode *custom_list_add_node_end(CustomListNode **head, const int data);
-void custom_list_free(CustomListNode *head);
-void custom_list_free_all(CustomListNode **head);
-int custom_list_pop(CustomListNode **head);
-CustomListNode *custom_list_get_node_at_index(CustomListNode *head, unsigned int index);
-int custom_list_sum(const CustomListNode *head);
-CustomListNode *custom_list_insert_at_index(CustomListNode **head, unsigned int idx, int data);
-int custom_list_delete_at_index(CustomListNode **head, unsigned int index);
-CustomListNode *custom_list_reverse(CustomListNode **head);
-size_t custom_list_print_safe(const CustomListNode *head);
-size_t custom_list_free_safe(CustomListNode **head);
-CustomListNode *custom_list_find_loop(CustomListNode *head);
+size_t print_listint(const listint_t *h);
+size_t listint_len(const listint_t *h);
+listint_t *add_nodeint(listint_t **head, const int n);
+listint_t *add_nodeint_end(listint_t **head, const int n);
+void free_listint(listint_t *head);
+void free_listint2(listint_t **head);
+int pop_listint(listint_t **head);
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
+int sum_listint(listint_t *head);
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
+int delete_nodeint_at_index(listint_t **head, unsigned int index);
+listint_t *reverse_listint(listint_t **head);
+size_t print_listint_safe(const listint_t *head);
+size_t free_listint_safe(listint_t **h);
+listint_t *find_listint_loop(listint_t *head);
 
 #endif
 
